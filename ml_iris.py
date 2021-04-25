@@ -29,3 +29,7 @@ print("X_new.shape: {}".format(X_new.shape))
 prediction = knn.predict(X_new)
 print("Prediction: {}".format(prediction))
 print("Predicted target name: {}".format(iris_dataset['target_names'][prediction]))
+
+y_pred = knn.predict(X_test)
+print("Test set prediction:\n {}".format(y_pred))
+print("Test set score (np.mean):{:.2f}".format(np.mean(y_pred == y_test)))
