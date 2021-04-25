@@ -23,5 +23,9 @@ print("y_test shape: {}".format(y_test.shape))
 knn = KNeighborsClassifier(n_neighbors=1)
 knn.fit(X_train, y_train)
 
-X_new = np.array([[5, 2.9, 1, 0, 0.2]])
+X_new = np.array([[5, 2.9, 1, 0.2]])
 print("X_new.shape: {}".format(X_new.shape))
+
+prediction = knn.predict(X_new)
+print("Prediction: {}".format(prediction))
+print("Predicted target name: {}".format(iris_dataset['target_names'][prediction]))
